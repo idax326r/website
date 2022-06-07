@@ -11,6 +11,11 @@
   src: url(fonts/ComingSoon-Regular.ttf);
 }
 
+h1 {
+  font-family: "Coming Soon", cursive;
+  font-size: 2rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -22,9 +27,6 @@ ul {
 .logo {
   font-size: 2.8rem;
 }
-main {
-  /* background-color: pink; */
-}
 
 .banner {
   padding: 2rem;
@@ -35,6 +37,15 @@ main {
   justify-content: space-between;
   color: black;
   font-family: "Coming Soon", cursive;
+}
+
+.logo a:hover {
+  color: goldenrod;
+  padding-left: 5px;
+}
+.main-menu ul li a:hover {
+  color: goldenrod;
+  padding-left: 5px;
 }
 
 .main-menu ul {
@@ -59,11 +70,18 @@ main {
   display: none; /* Skjul knappen som standard */
 }
 
+.baggrundsbillede {
+  background-color: #418f4e;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-position: 63% 20%;
+}
 .forside-content {
   font-family: "Coming Soon", cursive;
   width: 100vw;
   height: 100vh;
-  background-image: url(forside-100.webp);
+  /* background-image: url(flyver.JPG); */
   background-position: 63% 20%;
   background-size: cover;
   padding-top: 400px;
@@ -73,7 +91,7 @@ main {
   color: black;
   text-align: left;
 }
-.forside-content h2 {
+.forside-content h3 {
   font-size: 4vmin;
 }
 .line {
@@ -83,7 +101,7 @@ main {
   margin: 20px 0px 25px;
   border-radius: 5px;
 }
-.forside-content h1 {
+.forside-content h2 {
   font-size: 7vmin;
 }
 .about {
@@ -116,6 +134,25 @@ main {
 }
 /* om mig */
 
+.content {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1.5rem;
+}
+.grid_1_2_1 {
+  grid-column: 2/3;
+}
+.content h2 {
+  margin-top: 10px;
+  font-family: "Coming Soon", cursive;
+  font-weight: 800;
+}
+.content p {
+  max-width: 70ch;
+  line-height: 25px;
+}
+
 article.grid {
   display: grid;
   padding: 1rem;
@@ -134,15 +171,40 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 @media (max-width: 650px) {
   article.grid {
     display: block;
     font-size: 80%;
   }
+  /* article.grid h1,
   p {
     position: relative;
     margin: -3rem 0 2rem 1rem;
     padding: 1rem;
     background: rgba(white, 0.8);
+  } */
+}
+/* om mig øverste tekst */
+@media (max-width: 800px) {
+  .content {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    gap: 1.5rem;
+  }
+  .grid_1_2_1 {
+    grid-column: 2/3;
+  }
+  .content h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .content p {
+    font-size: 1.2rem;
+    line-height: 25px;
+  }
+  .content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
   }
 }
