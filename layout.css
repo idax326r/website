@@ -273,3 +273,15 @@ img {
     margin-bottom: 120px;
   }
 }
+/* footer */
+.footer-basic {
+  padding: 20px 0;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 0;
+}
