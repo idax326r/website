@@ -1,16 +1,40 @@
 * {
+  all: unset;
+  display: revert;
+  cursor: revert;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Coming Soon", cursive;
+  src: url(fonts/ComingSoon-Regular.ttf);
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  color: black;
+}
+
+.logo {
+  font-size: 2.8rem;
+}
+main {
+  /* background-color: pink; */
+}
+
 .banner {
-  background: #5000ca22;
   padding: 2rem;
 
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  color: black;
+  font-family: "Coming Soon", cursive;
 }
 
 .main-menu ul {
@@ -35,6 +59,38 @@
   display: none; /* Skjul knappen som standard */
 }
 
+.forside-content {
+  font-family: "Coming Soon", cursive;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(forside-100.webp);
+  background-position: 63% 20%;
+  background-size: cover;
+  padding-top: 400px;
+  padding-left: 20px;
+}
+.forside-content {
+  color: black;
+  text-align: left;
+}
+.forside-content h2 {
+  font-size: 4vmin;
+}
+.line {
+  width: 150px;
+  height: 4px;
+  background: goldenrod;
+  margin: 20px 0px 25px;
+  border-radius: 5px;
+}
+.forside-content h1 {
+  font-size: 7vmin;
+}
+.about {
+  border-radius: 30px;
+  color: goldenrod;
+}
+
 @media (max-width: 600px) {
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 600px */
@@ -56,5 +112,37 @@
     display: flex;
     flex: 1 1 100%;
     flex-flow: column;
+  }
+}
+/* om mig */
+
+article.grid {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 100px auto;
+}
+article p {
+  font-size: 1rem;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 650px) {
+  article.grid {
+    display: block;
+    font-size: 80%;
+  }
+  p {
+    position: relative;
+    margin: -3rem 0 2rem 1rem;
+    padding: 1rem;
+    background: rgba(white, 0.8);
   }
 }
