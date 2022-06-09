@@ -11,8 +11,8 @@
   src: url(fonts/ComingSoon-Regular.ttf);
 }
 @font-face {
-  font-family: "Ubuntu Condensed", sans-serif;
-  src: url(fonts/UbuntuCondensed-Regular.ttf);
+  font-family: "Bad Script", cursive;
+  src: url(fonts/BadScript-Regular.ttf);
 }
 
 h1 {
@@ -36,7 +36,14 @@ h3 {
 .link {
   font-family: "Coming Soon", cursive;
   font-size: 1rem;
-  color: goldenrod;
+  color: #418f4e;
+}
+.line2 {
+  background: #418f4e;
+  margin: 20px 0px 25px;
+  width: 175px;
+  height: 3px;
+  border-radius: 1px;
 }
 
 /*----------------------------- header --------------------------- */
@@ -65,11 +72,11 @@ ul {
 }
 
 .logo a:hover {
-  color: goldenrod;
+  color: #418f4e;
   padding-left: 5px;
 }
 .main-menu ul li a:hover {
-  color: goldenrod;
+  color: #418f4e;
   padding-left: 5px;
 }
 
@@ -97,12 +104,13 @@ ul {
 /* baggrunde */
 .forsidebillede {
   /* background-color: #418f4e; */
-  background-image: url(billeder/forsidebillede.webp);
+  background-image: url(billeder/nybaggrund2.webp);
   background-size: cover;
   background-position: 50% 20%;
 }
 .baggrundsbillede {
-  background-color: #418f4e;
+  background-color: #ffd1fa;
+  /* background-image: url(billeder/nybaggrund2.webp); */
   background-size: cover;
   background-position: 80% 20%;
 }
@@ -126,8 +134,8 @@ ul {
 }
 .line {
   width: 150px;
-  height: 4px;
-  background: #e7d5a1;
+  height: 3px;
+  background: #418f4e;
   margin: 20px 0px 25px;
   border-radius: 5px;
 }
@@ -136,7 +144,8 @@ ul {
 }
 .about {
   border-radius: 30px;
-  color: #e7d5a1;
+  color: #418f4e;
+  font-weight: bolder;
 }
 
 @media (max-width: 600px) {
@@ -211,7 +220,8 @@ img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  /* border: 7px solid white; */
 }
 
 /* om mig øverste tekst */
@@ -305,8 +315,34 @@ img {
 }
 
 /*----------------------- animation side  ------------------- */
+.animation-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.2fr;
+  gap: 50px;
+}
 
-.animation_content {
+.animation-content {
+  grid-column: 2/3;
+}
+
+.animation-content img {
+  margin-top: 25px;
+}
+.animation-container p {
+  margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+  .animation-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto 30px;
+    line-height: 25px;
+    gap: 30px;
+  }
+}
+
+/* .animation_content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -320,13 +356,8 @@ img {
   max-width: 60ch;
   margin-bottom: 20px;
 }
-.line2 {
-  background: #e7d5a1;
-  margin: 20px 0px 25px;
-  width: 175px;
-  height: 3px;
-  border-radius: 1px;
-}
+
+} */
 
 /*------------------------------ footer  ------------------------- */
 .footer-basic {
