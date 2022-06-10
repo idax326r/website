@@ -14,6 +14,15 @@
   font-family: "Bad Script", cursive;
   src: url(fonts/BadScript-Regular.ttf);
 }
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url(fonts/OpenSans-VariableFont_wdth\wght.ttf);
+}
+html {
+  --primary-color: #ffd1fa;
+  --secondary-color: #418f4e;
+  --hover-color: #ff8c00;
+}
 
 h1 {
   font-family: "Coming Soon", cursive;
@@ -26,6 +35,7 @@ h2 {
   margin-top: 10px;
   font-family: "Coming Soon", cursive;
   font-weight: 800;
+  font-size: 1.2rem;
 }
 h3 {
   font-family: "Coming Soon", cursive;
@@ -33,27 +43,37 @@ h3 {
   font-weight: 600;
   margin-top: 20px;
 }
+p {
+  font-family: open sans;
+  font-size: 0.9rem;
+  line-height: 22px;
+  font-family: "Open Sans", sans-serif;
+}
 .link {
   font-family: "Coming Soon", cursive;
   font-size: 1rem;
   font-weight: 700;
-  color: #418f4e;
+  color: var(--secondary-color);
 }
 .line2 {
-  background: #418f4e;
+  background: var(--secondary-color);
   margin: 20px 0px 25px;
   width: 175px;
-  height: 3px;
+  height: 2px;
   border-radius: 1px;
 }
 .link a:hover {
-  color: darkorange;
+  color: var(--hover-color);
   padding-left: 5px;
 }
 
 /*----------------------------- header --------------------------- */
 a {
   text-decoration: none;
+}
+.sm a:hover {
+  color: var(--hover-color);
+  padding-left: 5px;
 }
 ul {
   list-style: none;
@@ -77,11 +97,11 @@ ul {
 }
 
 .logo a:hover {
-  color: darkorange;
+  color: var(--hover-color);
   padding-left: 5px;
 }
 .main-menu ul li a:hover {
-  color: darkorange;
+  color: var(--hover-color);
   padding-left: 5px;
 }
 
@@ -108,16 +128,15 @@ ul {
 }
 /* baggrunde */
 .forsidebillede {
-  /* background-color: #418f4e; */
-  background-image: url(billeder/nybaggrund2.webp);
+  /* background-color: #ffd1fa; */
+  background-image: url(billeder/nybaggrund2.svg);
   background-size: cover;
   background-position: 50% 20%;
 }
 .baggrundsbillede {
-  background-color: #ffd1fa;
+  background-color: var(--primary-color);
   /* background-image: url(billeder/nybaggrund2.webp); */
   background-size: cover;
-  background-position: 80% 20%;
 }
 /*----------------------------- forside--------------------------- */
 .forside-content {
@@ -139,21 +158,21 @@ ul {
 }
 .line {
   width: 150px;
-  height: 3px;
-  background: #418f4e;
-  margin: 20px 0px 25px;
-  border-radius: 5px;
+  height: 2px;
+  background: var(--secondary-color);
+  margin: 14px 0px 14px;
+  border-radius: 3px;
 }
 .forside-content h2 {
   font-size: 7vmin;
 }
 .about {
   border-radius: 30px;
-  color: #418f4e;
+  color: var(--secondary-color);
   font-weight: bolder;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .toggle-btn {
     display: block; /* Vis knappen, når viewporten maksimalt er 600px */
   }
@@ -169,7 +188,7 @@ ul {
   .main-menu.shown ul {
     /* Vis menu-listen, når klassen ".shown" er til stede */
     gap: 5px;
-    border-top: 2px solid #418f4e;
+    border-top: 2px solid var(--secondary-color);
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
@@ -187,18 +206,9 @@ ul {
 }
 
 .about_content p {
-  font-size: 1rem;
-  line-height: 25px;
   max-width: 60ch;
   margin-bottom: 20px;
 }
-
-/* .content {
-  margin-top: 120px;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 1.5rem;
-} */
 
 .about-col p {
   margin-bottom: 0px;
@@ -206,20 +216,6 @@ ul {
   font-size: 0.9rem;
   line-height: 25px;
 }
-
-/* article.grid {
-  display: grid;
-  padding: 1rem;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  max-width: 1000px;
-  margin: 100px auto;
-}
-article p {
-  font-size: 1rem;
-  text-align: left;
-} */
 
 img {
   width: 100%;
@@ -248,6 +244,7 @@ img {
     line-height: 25px;
   }
 }
+
 /*----------------------------- web side --------------------------- */
 .web-container {
   display: grid;
@@ -262,46 +259,65 @@ img {
 .web-container p {
   margin-top: 20px;
 }
+.grid-container-web {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding-bottom: 70px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+  gap: 30px;
+}
+.grid-container-web img {
+  width: 300px;
+  /* object-fit: cover; */
+  object-position: center;
+  border: 5px solid white;
+}
 
 @media (max-width: 900px) {
   .web-container {
     display: grid;
     grid-template-columns: 1fr;
-    margin: auto 30px;
+    margin: auto 50px;
     line-height: 25px;
     gap: 30px;
   }
 }
 
-/*----------------------- billede galleri ------------------- */
-.web-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+/*----------------------- UX galleri ------------------- */
+
+.grid-container {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
-  margin-bottom: 100px;
-  margin-left: 50px;
-  margin-right: 50px;
+  padding-bottom: 70px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+  column-gap: 30px;
+  row-gap: 30px;
+}
+.grid-container img {
+  width: 300px;
+  height: 250px;
+  /* object-fit: cover; */
+  object-position: center;
+  border: 5px solid white;
 }
 
-.web-content img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-}
-
-.web-gallery img {
-  height: 100%;
-}
+/*----------------------- om mig galleri ------------------- */
 
 .gallery {
-  grid-template-columns: 3;
+  grid-template-columns: 1fr 1fr 1fr;
   --row-height: 300px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 50px;
-  margin-bottom: 100px;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -333,6 +349,7 @@ img {
 
 .animation-content img {
   margin-top: 25px;
+  border: 5px solid white;
 }
 .animation-container p {
   margin-top: 15px;
@@ -348,23 +365,6 @@ img {
   }
 }
 
-/* .animation_content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 78%;
-  margin: 50px auto;
-}
-
-.animation_content p {
-  font-size: 1rem;
-  line-height: 25px;
-  max-width: 60ch;
-  margin-bottom: 20px;
-}
-
-} */
-
 /*------------------------------ footer  ------------------------- */
 .footer-basic {
   padding: 20px 0;
@@ -377,21 +377,36 @@ img {
   color: rgb(0, 0, 0);
   margin-bottom: 0;
 }
-.grid-container {
+
+.blomst {
+  width: 40%;
+  aspect-ratio: 4/5;
+}
+
+/* #blomst_container {
+  width: 20%;
+  aspect-ratio: 4/5;
   position: absolute;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  padding-bottom: 70px;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
-  column-gap: 10px;
-  row-gap: 10px;
+  top: 200px;
+  left: 392px;
 }
-.grid-container img {
-  width: 300;
-  height: 250px;
-  /* object-fit: cover; */
-  object-position: center;
+#blomst_sprite {
+  background-image: url(billeder/favicon1.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
+.rotation {
+  animation-name: rotation_kf;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation_kf {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
