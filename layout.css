@@ -36,6 +36,7 @@ h3 {
 .link {
   font-family: "Coming Soon", cursive;
   font-size: 1rem;
+  font-weight: 700;
   color: #418f4e;
 }
 .line2 {
@@ -44,6 +45,10 @@ h3 {
   width: 175px;
   height: 3px;
   border-radius: 1px;
+}
+.link a:hover {
+  color: darkorange;
+  padding-left: 5px;
 }
 
 /*----------------------------- header --------------------------- */
@@ -72,11 +77,11 @@ ul {
 }
 
 .logo a:hover {
-  color: #418f4e;
+  color: darkorange;
   padding-left: 5px;
 }
 .main-menu ul li a:hover {
-  color: #418f4e;
+  color: darkorange;
   padding-left: 5px;
 }
 
@@ -164,7 +169,7 @@ ul {
   .main-menu.shown ul {
     /* Vis menu-listen, når klassen ".shown" er til stede */
     gap: 5px;
-    border-top: 2px solid #e7d5a1;
+    border-top: 2px solid #418f4e;
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
@@ -323,6 +328,7 @@ img {
 
 .animation-content {
   grid-column: 2/3;
+  margin-bottom: 25px;
 }
 
 .animation-content img {
@@ -370,4 +376,22 @@ img {
   font-size: 13px;
   color: rgb(0, 0, 0);
   margin-bottom: 0;
+}
+.grid-container {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding-bottom: 70px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.grid-container img {
+  width: 300;
+  height: 250px;
+  /* object-fit: cover; */
+  object-position: center;
 }
