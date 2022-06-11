@@ -102,7 +102,7 @@ ul {
 }
 .main-menu ul li a:hover {
   color: var(--hover-color);
-  padding-left: 5px;
+  text-decoration: underline;
 }
 
 .main-menu ul {
@@ -259,8 +259,14 @@ img {
 .web-container p {
   margin-top: 20px;
 }
+
+.web-content img {
+  border: 7px solid white;
+  margin-top: 30px;
+}
+
 .grid-container-web {
-  position: absolute;
+  /* position: absolute; */
   justify-content: center;
   align-items: center;
   margin-top: 30px;
@@ -366,11 +372,8 @@ img {
 }
 
 /*------------------------------ footer  ------------------------- */
-.footer-basic {
+footer {
   padding: 20px 0;
-}
-
-.footer-basic .copyright {
   margin-top: 15px;
   text-align: center;
   font-size: 13px;
@@ -379,8 +382,7 @@ img {
 }
 
 .blomst {
-  width: 40%;
-  aspect-ratio: 4/5;
+  width: 50%;
 }
 
 /* #blomst_container {
@@ -410,3 +412,17 @@ img {
     transform: rotate(360deg);
   }
 } */
+figure {
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  margin: auto;
+}
+
+figcaption {
+  background-color: white;
+  color: black;
+  font: italic smaller sans-serif;
+  padding: 5px;
+  text-align: center;
+}
