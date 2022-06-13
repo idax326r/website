@@ -137,9 +137,17 @@ ul {
 /* ------------baggrunde-------------------- */
 .forsidebillede {
   /* background-color: #ffd1fa; */
-  background-image: url(billeder/SVG/nyforsidebillede2.svg);
+  background-image: url(billeder/SVG/nyforsidebillede3.svg);
   background-size: cover;
   background-position: 50% 20%;
+}
+
+@media (max-width: 800px) {
+  .forsidebillede {
+    background-image: url(billeder/SVG/nyforsidebillede4.svg);
+    background-size: cover;
+    background-position: 55% 20%;
+  }
 }
 .baggrundsbillede {
   background-color: var(--primary-color);
