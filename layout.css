@@ -270,6 +270,7 @@ figcaption {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   padding: 0px 100px 0px 95px;
+  margin-left: 80px;
 }
 
 .ux_container h1 {
@@ -286,6 +287,7 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr;
     line-height: 25px;
+    margin-left: 0px;
   }
   .ux_container p {
     margin-top: 10px;
@@ -319,31 +321,43 @@ figcaption {
 /*----------------------- animation side  ------------------- */
 .animation-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1.2fr;
-  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 0px 100px 0px 95px;
+  margin-left: 80px;
+}
+.animation-container h1 {
+  margin-bottom: -30px;
 }
 
 .animation-content {
-  grid-column: 2/3;
+  /* grid-column: 2/3; */
   margin-bottom: 25px;
 }
 
-.animation-content img {
-  margin-top: 25px;
-  border: 5px solid white;
-}
 .animation-container p {
   margin-top: 20px;
   max-width: 65ch;
+}
+.animation-content4 img {
+  margin-top: 25px;
+  border: 5px solid white;
 }
 
 @media (max-width: 800px) {
   .animation-container {
     display: grid;
     grid-template-columns: 1fr;
-    margin: auto 50px;
     line-height: 25px;
-    gap: 30px;
+    margin-left: 0px;
+  }
+  .animation-container p {
+    margin-top: 10px;
+    margin-top: 10px;
+    max-width: 60ch;
+  }
+  .animation-content4 {
+    margin-top: -20px;
   }
 }
 
@@ -353,6 +367,7 @@ figcaption {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   padding: 0px 100px 0px 95px;
+  margin-left: 80px;
 }
 
 .indhold_container h1 {
@@ -369,6 +384,7 @@ figcaption {
     display: grid;
     grid-template-columns: 1fr;
     line-height: 25px;
+    margin-left: 0px;
   }
   .indhold_container p {
     margin-top: 10px;
