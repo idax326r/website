@@ -12,7 +12,7 @@
 }
 @font-face {
   font-family: "Open Sans";
-  src: url(fonts/OpenSans-VariableFont_wdth\wght.ttf);
+  src: url(fonts/OpenSans-Regular.ttf);
 }
 html {
   --primary-color: #ffe3fc;
@@ -150,8 +150,8 @@ ul {
   }
 }
 .baggrundsbillede {
-  background-color: var(--primary-color);
-  /* background-image: url(billeder/nybaggrund2.webp); */
+  /* background-color: var(--primary-color); */
+  background-image: url(billeder/SVG/almbaggrund.svg);
   background-size: cover;
 }
 
@@ -333,8 +333,8 @@ figcaption {
   row-gap: 30px;
 }
 .grid-container img {
-  width: 300px;
-  height: 250px;
+  width: 340px;
+  height: 190px;
   object-position: center;
   border: 5px solid white;
 }
