@@ -14,6 +14,7 @@
   font-family: "Open Sans";
   src: url(fonts/opensans-variablefont_wdthwght-webfont.woff2) format(woff2);
 }
+/* generelle */
 html {
   --primary-color: #ffe3fc;
   --green-color: #418f4e;
