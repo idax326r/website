@@ -28,10 +28,10 @@ h1 {
   margin-top: 20px;
 }
 h2 {
-  margin-top: 10px;
   font-family: "Coming Soon";
   font-weight: 800;
   font-size: 1.2rem;
+  margin-top: 20px;
 }
 h3 {
   font-family: "Coming Soon";
@@ -135,7 +135,6 @@ ul {
 
 /* ------------baggrunde-------------------- */
 .forsidebillede {
-  /* background-color: #ffd1fa; */
   background-image: url(billeder/SVG/nyforsidebillede3.svg);
   background-size: cover;
   background-position: 50% 20%;
@@ -145,7 +144,7 @@ ul {
   .forsidebillede {
     background-image: url(billeder/SVG/nyforsidebillede4.svg);
     background-size: cover;
-    background-position: 55% 20%;
+    background-position: 54% 20%;
   }
 }
 .baggrundsbillede {
@@ -291,6 +290,14 @@ figcaption {
   margin-top: 20px;
   max-width: 60ch;
 }
+
+.kloever {
+  min-width: 30%;
+  max-width: 35%;
+  transform: rotate(30deg);
+  margin-left: 190px;
+}
+
 @media (max-width: 950px) {
   .ux_container {
     display: grid;
@@ -300,6 +307,12 @@ figcaption {
   }
   .ux_container p {
     margin-top: 10px;
+  }
+  .kloever {
+    max-width: 60%;
+    transform: rotate(0deg);
+    margin-left: 15px;
+    margin-top: 50px;
   }
 }
 
@@ -318,6 +331,12 @@ figcaption {
   }
   .item4 {
     margin-top: -20px;
+  }
+  .kloever {
+    max-width: 20%;
+    transform: rotate(0deg);
+    margin-left: 200px;
+    margin-top: -75px;
   }
 }
 /* billeder UX */
@@ -355,6 +374,9 @@ figcaption {
   margin-bottom: 25px;
 }
 
+.animation-content4 h2 {
+  margin-bottom: -15px;
+}
 .animation-container p {
   margin-top: 20px;
   max-width: 65ch;
@@ -389,6 +411,9 @@ figcaption {
   }
   .animation-content4 {
     margin-top: -20px;
+  }
+  .animation-content4 h2 {
+    margin-bottom: 0px;
   }
 }
 
