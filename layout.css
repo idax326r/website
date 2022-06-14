@@ -70,6 +70,9 @@ img {
   height: auto;
   display: block;
 }
+.blomst {
+  width: 50%;
+}
 
 /*----------------------------- header --------------------------- */
 a {
@@ -415,7 +418,7 @@ figcaption {
 }
 .grid-container img {
   width: 340px;
-  height: 190px;
+  height: 220px;
   object-position: center;
   border: 5px solid white;
 }
@@ -612,8 +615,8 @@ figcaption {
     margin-top: 10px;
     max-width: 60ch;
   }
-  .portfolio-content4 h2 {
-    margin-bottom: 0px;
+  .portfolio-content4 p {
+    margin-top: -30px;
   }
   .portfolio-content1 h1 {
     margin-bottom: -50px;
@@ -692,13 +695,9 @@ figcaption {
 /*------------------------------ footer  ------------------------- */
 footer {
   padding: 20px 0;
-  margin-top: 15px;
+  margin-top: 50px;
   text-align: center;
   font-size: 13px;
   color: rgb(0, 0, 0);
   margin-bottom: 0;
-}
-
-.blomst {
-  width: 50%;
 }
