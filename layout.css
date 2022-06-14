@@ -16,7 +16,7 @@
 }
 html {
   --primary-color: #ffe3fc;
-  --secondary-color: #418f4e;
+  --green-color: #418f4e;
   --hover-color: #ff8c00;
 }
 
@@ -48,10 +48,10 @@ p {
   font-family: "Coming Soon";
   font-size: 1rem;
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--green-color);
 }
 .line2 {
-  background: var(--secondary-color);
+  background: var(--green-color);
   margin: 20px 0px 25px;
   width: 175px;
   height: 2px;
@@ -69,9 +69,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-.blomst {
-  width: 50%;
 }
 
 /*----------------------------- header --------------------------- */
@@ -93,7 +90,6 @@ ul {
 
 .banner {
   padding: 2rem;
-
   /* 1. Få elementerne til at stå ved siden af hinanden og brug justify-content til at skubbe dem væk fra hinanden */
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +147,6 @@ ul {
   }
 }
 .baggrundsbillede {
-  /* background-color: var(--primary-color); */
   background-image: url(billeder/SVG/almbaggrund.svg);
   background-size: cover;
 }
@@ -189,16 +184,17 @@ figcaption {
 .line {
   width: 150px;
   height: 3px;
-  background: var(--secondary-color);
+  background: var(--green-color);
   margin: 14px 0px 14px;
   border-radius: 3px;
 }
 .forside-content h2 {
+  /* Represents in percentage the smaller of vw and vh. */
   font-size: 7vmin;
 }
 .about {
   border-radius: 30px;
-  color: var(--secondary-color);
+  color: var(--green-color);
   font-weight: bolder;
 }
 
@@ -218,7 +214,7 @@ figcaption {
   .main-menu.shown ul {
     /* Vis menu-listen, når klassen ".shown" er til stede */
     gap: 5px;
-    border-top: 2px solid var(--secondary-color);
+    border-top: 2px solid var(--green-color);
     padding-top: 1rem;
     display: flex;
     flex: 1 1 100%;
@@ -227,52 +223,6 @@ figcaption {
 }
 
 /*----------------------------- web side --------------------------- */
-/* .web-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1.2fr;
-  gap: 50px;
-}
-
-.web-content {
-  grid-column: 2/3;
-}
-
-.web-container p {
-  margin-top: 20px;
-}
-
-.web-content img {
-  border: 7px solid white;
-  margin-top: 30px;
-}
-
-.grid-container-web {
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  padding-bottom: 50px;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 450px));
-  row-gap: 30px;
-  column-gap: 30px;
-}
-.grid-container-web img {
-  object-position: center;
-  border: 5px solid white;
-}
-
-@media (max-width: 750px) {
-  .web-container {
-    grid-template-columns: 1fr;
-    line-height: 25px;
-    margin-left: 0px;
-    padding: 0px 50px 0px 50px;
-  }
-  .web-content {
-    grid-column: unset;
-  }
-} */
 
 .web-container {
   display: grid;
@@ -298,6 +248,7 @@ figcaption {
   margin-top: 25px;
   border: 5px solid white;
 }
+/* ipad version */
 @media (max-width: 950px) {
   .web-container {
     display: grid;
@@ -309,7 +260,7 @@ figcaption {
     margin-top: 10px;
   }
 }
-
+/* mobil version */
 @media (max-width: 750px) {
   .web-container {
     display: grid;
@@ -333,9 +284,9 @@ figcaption {
   }
 }
 
-/*----------------------- UX galleri ------------------- */
-
-.ux_container {
+/*----------------------- UX side ------------------- */
+/* tekst */
+.ux-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -343,11 +294,11 @@ figcaption {
   margin-left: 80px;
 }
 
-.ux_container h1 {
+.ux-container h1 {
   margin-bottom: -30px;
 }
 
-.ux_container p {
+.ux-container p {
   margin-top: 20px;
   max-width: 60ch;
 }
@@ -358,15 +309,15 @@ figcaption {
   transform: rotate(30deg);
   margin-left: 190px;
 }
-
+/* ipad version */
 @media (max-width: 950px) {
-  .ux_container {
+  .ux-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     line-height: 25px;
     margin-left: -50px;
   }
-  .ux_container p {
+  .ux-container p {
     margin-top: 10px;
   }
   .kloever {
@@ -376,21 +327,21 @@ figcaption {
     margin-top: 50px;
   }
 }
-
+/* mobil version */
 @media (max-width: 750px) {
-  .ux_container {
+  .ux-container {
     display: grid;
     grid-template-columns: 1fr;
     line-height: 25px;
     margin-left: 0px;
     padding: 0px 50px 0px 50px;
   }
-  .ux_container p {
+  .ux-container p {
     margin-top: 10px;
     margin-top: 10px;
     max-width: 60ch;
   }
-  .item4 {
+  .ux-content4 {
     margin-top: -20px;
   }
   .kloever {
@@ -399,12 +350,12 @@ figcaption {
     margin-left: 200px;
     margin-top: -75px;
   }
-  .item1 h1 {
+  .ux-content1 h1 {
     margin-bottom: -50px;
   }
 }
 
-/* billeder UX */
+/* galleri UX */
 .grid-container {
   justify-content: center;
   align-items: center;
@@ -424,6 +375,7 @@ figcaption {
 }
 
 /*----------------------- animation side  ------------------- */
+
 .animation-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -450,6 +402,7 @@ figcaption {
   margin-top: 25px;
   border: 5px solid white;
 }
+/* ipad version */
 @media (max-width: 950px) {
   .animation-container {
     display: grid;
@@ -461,7 +414,7 @@ figcaption {
     margin-top: 10px;
   }
 }
-
+/* mobil version */
 @media (max-width: 750px) {
   .animation-container {
     display: grid;
@@ -486,7 +439,7 @@ figcaption {
 }
 
 /*------------------------------ indhold  ------------------------- */
-.indhold_container {
+.indhold-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -494,49 +447,49 @@ figcaption {
   margin-left: 80px;
 }
 
-.indhold_container h1 {
+.indhold-container h1 {
   margin-bottom: -30px;
 }
 
-.indhold_container p {
+.indhold-container p {
   margin-top: 20px;
   max-width: 60ch;
 }
-/* ipad */
+/* ipad version */
 @media (max-width: 950px) {
-  .indhold_container {
+  .indhold-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     line-height: 25px;
     margin-left: -50px;
   }
-  .indhold_container p {
+  .indhold-container p {
     margin-top: 10px;
     margin-top: 10px;
   }
 }
 /* mobil version */
 @media (max-width: 750px) {
-  .indhold_container {
+  .indhold-container {
     display: grid;
     grid-template-columns: 1fr;
     line-height: 25px;
     margin-left: 0px;
     padding: 0px 50px 0px 50px;
   }
-  .indhold_container p {
+  .indhold-container p {
     margin-top: 10px;
     max-width: 60ch;
   }
-  .grid4 {
+  .indhold-content4 {
     margin-top: -20px;
   }
-  .grid1 h1 {
+  .indhold-content1 h1 {
     margin-bottom: -50px;
   }
 }
 /* galleri */
-.grid-container-indhold {
+.billede-container-indhold {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -544,14 +497,14 @@ figcaption {
   margin-left: 80px;
   margin-top: 50px;
 }
-.grid-container-indhold img {
+.billede-container-indhold img {
   min-width: 300px;
   object-position: center;
   border: 5px solid white;
 }
 
 @media (max-width: 950px) {
-  .grid-container-indhold {
+  .billede-container-indhold {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0px;
@@ -590,7 +543,7 @@ figcaption {
   max-width: 35%;
   transform: rotate(-30deg);
 }
-
+/* ipad version */
 @media (max-width: 950px) {
   .portfolio-container {
     display: grid;
@@ -605,7 +558,7 @@ figcaption {
     display: none;
   }
 }
-
+/* mobil version */
 @media (max-width: 750px) {
   .portfolio-container {
     display: grid;
@@ -630,16 +583,18 @@ figcaption {
 }
 
 /*----------------------------- om mig --------------------------- */
+.blomst {
+  width: 50%;
+}
 
-.about_content {
+.about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 70%;
   margin: 0 auto;
-  /* margin: 20px 500px 20px 400px; */
 }
 
-.about_content p {
+.about-content p {
   max-width: 60ch;
   margin-bottom: 20px;
 }
@@ -653,7 +608,7 @@ figcaption {
 
 /* om mig øverste tekst */
 @media (max-width: 800px) {
-  .about_content {
+  .about-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -661,11 +616,11 @@ figcaption {
   .about_grid {
     grid-column: 2/3;
   }
-  .about_content h1 {
+  .about-content h1 {
     font-size: 1.8rem;
     font-weight: 600;
   }
-  .about_content p {
+  .about-content p {
     font-size: 1rem;
     line-height: 25px;
   }
