@@ -8,11 +8,11 @@
 }
 @font-face {
   font-family: "Coming Soon";
-  src: url(fonts/ComingSoon-Regular.ttf);
+  src: url(fonts/comingsoon-regular-webfont.woff2) format(woff2);
 }
 @font-face {
   font-family: "Open Sans";
-  src: url(fonts/OpenSans-Regular.ttf);
+  src: url(fonts/opensans-variablefont_wdthwght-webfont.woff2) format(woff2);
 }
 html {
   --primary-color: #ffe3fc;
@@ -40,10 +40,9 @@ h3 {
   margin-top: 20px;
 }
 p {
-  font-family: open sans;
+  font-family: "Open Sans";
   font-size: 0.9rem;
   line-height: 22px;
-  font-family: "Open Sans";
 }
 .link {
   font-family: "Coming Soon";
@@ -254,9 +253,10 @@ figcaption {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 450px));
   row-gap: 30px;
+  column-gap: 30px;
 }
 .grid-container-web img {
-  width: 400px;
+  /* width: 400px; */
   object-position: center;
   border: 5px solid white;
 }
